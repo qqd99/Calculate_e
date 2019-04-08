@@ -1,0 +1,6 @@
+def derive(function, value):
+    h = 0.00000000001
+    top = function(value + h) - function(value)
+    bottom = h
+    slope = top / bottom
+    return float("%.3f" % slope)
