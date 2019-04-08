@@ -1,0 +1,9 @@
+from decimal import *
+getcontext().prec = 50
+quarterpi = Decimal(0)
+n = 0
+while True:
+    quarterpi = quarterpi + Decimal(-1)**n / (Decimal(2*n + 1))
+    if (n % 10 == 0):
+        print((quarterpi*Decimal(4)))
+    n += 1
